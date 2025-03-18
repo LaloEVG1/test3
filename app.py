@@ -47,4 +47,4 @@ for well in st.session_state.wells:
     ).add_to(m)
 
 # Display the map
-st_folium(m, width=1500, height=1500)
+st_folium(m, width=800, height=800)
