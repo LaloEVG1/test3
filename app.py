@@ -7,22 +7,22 @@ import pandas as pd
 if 'wells' not in st.session_state:
     st.session_state.wells = []
 
-st.title("City Water Well Map")
+st.title("UBICACIÓN POZOS DE AGUA TR")
 
 # Sidebar to select map coordinates and zoom
-st.sidebar.header("Map Settings")
-lat = st.sidebar.number_input("Latitude", value=0.0, format="%.6f")
-lon = st.sidebar.number_input("Longitude", value=0.0, format="%.6f")
-zoom = st.sidebar.slider("Zoom Level", min_value=5, max_value=20, value=12)
+st.sidebar.header("Configuración del mapa")
+lat = st.sidebar.number_input("Latitud", value=25.67507, format="%.6f")
+lon = st.sidebar.number_input("Longitud", value=-100.31847, format="%.6f")
+zoom = st.sidebar.slider("Zoom", min_value=5, max_value=20, value=12)
 
 # Sidebar to add water well locations
-st.sidebar.header("Add a Water Well")
-well_lat = st.sidebar.number_input("Well Latitude", format="%.6f")
-well_lon = st.sidebar.number_input("Well Longitude", format="%.6f")
-well_name = st.sidebar.text_input("Well Name")
-well_info = st.sidebar.text_area("Additional Information")
+st.sidebar.header("Agregar pozos")
+well_lat = st.sidebar.number_input("Latitud del pozo", format="%.6f")
+well_lon = st.sidebar.number_input("Longitud del pozo", format="%.6f")
+well_name = st.sidebar.text_input("Id del pozo")
+well_info = st.sidebar.text_area("Información adicional")
 
-if st.sidebar.button("Add Well"):
+if st.sidebar.button("Agregar pozo"):
     if well_name and well_info:
         st.session_state.wells.append({
             "lat": well_lat,
@@ -30,7 +30,7 @@ if st.sidebar.button("Add Well"):
             "name": well_name,
             "info": well_info
         })
-        st.sidebar.success("Well added successfully!")
+        st.sidebar.success("Pozo agregado satisfactoriamente!")
     else:
         st.sidebar.error("Please enter a well name and information.")
 
@@ -43,8 +43,8 @@ for well in st.session_state.wells:
         location=[well["lat"], well["lon"]],
         popup=f"<b>{well['name']}</b><br>{well['info']}",
         tooltip=well["name"],
-        icon=folium.Icon(color="blue")
+        icon=folium.Icon(color="red")
     ).add_to(m)
 
 # Display the map
-st_folium(m, width=700, height=500)
+st_folium(m, width=1500, height=1500)
