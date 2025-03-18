@@ -3,3 +3,4 @@ numpy
 pandas
 matplotlib
 folium
+streamlit_folium
