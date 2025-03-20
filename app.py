@@ -56,10 +56,10 @@ if not df.empty:
 st.subheader("AGREGAR UN POZO")
 with st.form("well_form"):
     name = st.text_input("NOMBRE")
-    latitude = st.number_input("Latitude", format="%.6f")
-    longitude = st.number_input("Longitude", format="%.6f")
-    depth = st.number_input("PROFUNDIDAD (m)", min_value=0.0, format="%.2f")
-    quality = st.number_input("AFORO", min_value=0.0, format="%.2f")
+    latitude = st.number_input("Latitud", format="%.6f")
+    longitude = st.number_input("Longitud", format="%.6f")
+    depth = st.number_input("Profundidad (m)", min_value=0.0, format="%.2f")
+    quality = st.number_input("Aforo (l/s)", min_value=0.0, format="%.2f")
     added_by = st.text_input("ID")
     submit = st.form_submit_button("Add Well")
 
