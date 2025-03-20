@@ -43,7 +43,7 @@ def display_map(df):
         folium.Marker(
             location=[row["latitude"], row["longitude"]],
             popup=f"<b>{row['name']}</b><br>Prof(m): {row['depth']}m<br>Aforo(l/s): {row['quality']}",
-            icon=folium.Icon(color="blue", icon="cloud")
+            icon=folium.Icon(color="blue", icon="xmark")
         ).add_to(m)
     folium_static(m)
 
