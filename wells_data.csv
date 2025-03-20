@@ -1,4 +1,4 @@
-latituDe,longitude,name,depth,quality,added_by
+latitude,longitude,name,depth,quality,added_by
 25.605194,-100.104445,P1_VC,80,15.2,admin
 25.617775,-100.106432,P2_VC,80,10,admin
 25.608442,-100.101624,P3_VC,,3.5,admin
