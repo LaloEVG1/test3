@@ -1,2 +1,3 @@
 latitude,longitude,name,depth,quality,added_by
-25.608442,-100.101624,well A,30,good,admin
+25.608442,-100.101624,well A,30.0,good,admin
+25.605194,-100.104445,P1_VC,80.0,Good,ADMIN
