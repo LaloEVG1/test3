@@ -47,20 +47,20 @@ def display_map(df):
     folium_static(m)
 
 # --- STREAMLIT UI ---
-st.title("City Water Wells Map")
+st.title("POZOS TR")
 
 df = load_well_data()
 if not df.empty:
     display_map(df)
 
-st.subheader("Add a New Well")
+st.subheader("AGREGAR UN POZO")
 with st.form("well_form"):
-    name = st.text_input("Well Name")
+    name = st.text_input("NOMBRE")
     latitude = st.number_input("Latitude", format="%.6f")
     longitude = st.number_input("Longitude", format="%.6f")
-    depth = st.number_input("Depth (m)", min_value=0.0, format="%.2f")
-    quality = st.selectbox("Water Quality", ["Good", "Moderate", "Poor"])
-    added_by = st.text_input("Your Name")
+    depth = st.number_input("PROFUNDIDAD (m)", min_value=0.0, format="%.2f")
+    quality = st.selectbox("AFORO", ["Good", min_value=0.0, format="%.2f")
+    added_by = st.text_input("ID")
     submit = st.form_submit_button("Add Well")
 
 if submit and name and latitude and longitude:
@@ -68,4 +68,4 @@ if submit and name and latitude and longitude:
                               columns=["latitude", "longitude", "name", "depth", "quality", "added_by"])
     df = pd.concat([df, new_entry], ignore_index=True)
     save_well_data(df)
-    st.experimental_rerun()
+    st.rerun()
