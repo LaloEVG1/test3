@@ -59,7 +59,7 @@ with st.form("well_form"):
     latitude = st.number_input("Latitude", format="%.6f")
     longitude = st.number_input("Longitude", format="%.6f")
     depth = st.number_input("PROFUNDIDAD (m)", min_value=0.0, format="%.2f")
-    quality = st.selectbox("AFORO", min_value=0.0, format="%.2f")
+    quality = st.number_input("AFORO", min_value=0.0, format="%.2f")
     added_by = st.text_input("ID")
     submit = st.form_submit_button("Add Well")
 
