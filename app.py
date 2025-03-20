@@ -7,6 +7,8 @@ import io
 
 #CONFIGURATION
 
+
+GITHUB_TOKEN = st.secrets["GITHUB_TOKEN"]
 REPO_NAME = "LaloEVG1/test3"
 DATA_FILE = "wells_data.csv"
 
