@@ -6,7 +6,7 @@ from github import Github
 import io
 
 #CONFIGURATION
-GITHUB_TOKEN = "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"
+
 REPO_NAME = "LaloEVG1/test3"
 DATA_FILE = "wells_data.csv"
 
