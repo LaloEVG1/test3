@@ -4,4 +4,4 @@ pandas
 matplotlib
 folium
 streamlit_folium
-gspread
+PyGithub
