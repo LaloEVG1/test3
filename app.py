@@ -1,6 +1,6 @@
 import streamlit as st
 import folium
-from streamlit_folium import st_folium
+from streamlit_folium import folium_static
 import pandas as pd
 from github import Github
 import io
